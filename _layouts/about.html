@@ -17,11 +17,11 @@ layout: default
       {% if page.profile.image %}
         <img class="img-fluid z-depth-1 rounded" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}">
       {% endif %}
-      {% if page.profile.address %}
+      <!-- {% if page.profile.address %}
         <div class="address">
           {{ page.profile.address }}
         </div>
-      {% endif %}
+      {% endif %} -->
     </div>
     {% endif %}
 
@@ -37,14 +37,14 @@ layout: default
       {% include selected_papers.html %}
     {% endif %}
 
-    {% if page.social %}
+    <!-- {% if page.social %}
     <div class="social">
       <div class="contact-icons">
         {% include social.html %}
       </div>
       <div class="contact-note">{{ site.contact_note }}</div>
     </div>
-    {% endif %}
+    {% endif %} -->
   </article>
 
 </div>
