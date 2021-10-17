@@ -40,7 +40,7 @@ Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en
     Combining <i>look</i> (left) and <i>expression</i> (right) into a single image (middle)
 </div>
 
-
+***Update: I extended this work to produce face animations, which you can find in this <a href="{{ site.baseurl }}/blog/2021/animation/">post</a>.***
 
 Many of you probably have heard of the possibility of projecting existing face images into the latent space of a pre-trained Generative Adversarial Network (GAN). This is usually achieved through the minimization of a perceptual loss with respect to a latent code: We attempt to replicate a given image with what the network has learned. Luckily, pre-trained StyleGAN models are readily available for this purpose.
 
