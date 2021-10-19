@@ -34,6 +34,11 @@ blockquote {
   text-align: center;
 }
 
+.MathJax {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
 // Caption
 
 .caption {
@@ -53,6 +58,7 @@ blockquote {
 .profile {
   margin-left: 1rem;
   width: 100%;
+  margin-bottom: 1rem;
 
   .address {
     margin-bottom: 5px;
