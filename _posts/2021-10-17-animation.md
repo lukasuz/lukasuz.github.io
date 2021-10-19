@@ -99,8 +99,7 @@ For each video frame index $$i$$ we want to find the latent code $$w^i$$, with $
 $$
     \arg \min_{w^i} \lambda_{1} \mathcal{L}_{lpips}(x_{look}, x^i) + \lambda_{2} \mathcal{L}_{fan}(x_{landmark}^i, x^i, \lambda_{landmark}) + \lambda_{3} \\ \mathcal{L}_{smooth}(w^i, w^{i-1}).
 $$
-
-The first term measures the perceptual similarity between generated images and the target look, see [2]. The second term captures the divergence between facial landmarks of the current generated image and the current target video frame. The last term calculates the similarity between the current latent code and the previous latent code. More specifically, the second term is defined as:
+Practically, this is achieved through gradient descent, keeping the network weights fixed, but treating the input $$w^i$$ variable. The first term measures the perceptual similarity between generated images and the target look, see [2]. The second term captures the divergence between facial landmarks of the current generated image and the current target video frame. The last term calculates the similarity between the current latent code and the previous latent code. More specifically, the second term is defined as:
 
 $$
 \mathcal{L}_{fan}(x^1, x^2, \lambda_{landmark}) = \sum_i^N \lambda_{landmark} \sqrt{(FAN(x^1) - FAN(x^2))^2},
