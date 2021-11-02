@@ -45,6 +45,8 @@ In my <a href="{{ site.baseurl }}/blog/2021/landmarks/">previous post</a>, I sho
 
 You can generate your own animations in this <a href="https://colab.research.google.com/drive/1ghSB78uobrRxWRtDSCsXCKEUOkUlpOyH?usp=sharing">notebook</a>. The code itself can be found in this <a href="https://github.com/lukasuz/stylegan2-landmark-projection">repository</a>.
 
+**I have significantly improved the results. A sample sequence is given at the end of the post.**
+
 <h3>Preserving the face identity (more or less)</h3>
 For this, we will need two inputs. Firstly, a face image, $$x_{look}$$, whose look shall be replicated. Secondly, a sequence of $$i$$ images, $$x_{landmark}^i$$, whose facial landmarks are used for projection. Examples are given below.
 
@@ -166,6 +168,34 @@ Looking at the video, we can see that the frames are a little bit smoother when 
 I am looking forward to trying this out in the future with the improved StyleGAN3 model.
 
 Again, a huge shout out to the StyleGAN-team and NVIDIA for their work and pre-trained models.
+
+
+<h3>Improved Results</h3>
+I have been able to improve the result with respect to two things. Firstly, the sequence is significantly less jittery. This can be achieved by fixing the noise buffers after the first iteration. The remaining jittering can be explained by the unsmoothed sequences of extracted facial landmarks. One remaining problem is the variable light source. Secondly, the projected image is closer in look to the target by seachring space for the latent code to $$18 \times 512$$, i.e. a different latent code $$1 \times 512$$ for each layer in generator. This expansion of the latent space results often in weird artifacts in the generated images, but the fidelity loss term can be utilized to circumvent this. Besides this, I upgraded to ColabPro and a 1 second video can now be generated within 6-7 minutes. I highly recommend it. Anyway, here the results:
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/look_img.png">
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <!-- <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/smile.mp4"> -->
+         <video class="img-fluid rounded z-depth-1"  width="100%" controls autoplay loop>
+            <source src="{{ site.baseurl }}/assets/img/smile_input.m4v" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> 
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <!-- <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/smile.mp4"> -->
+         <video class="img-fluid rounded z-depth-1"  width="100%" controls autoplay loop>
+            <source src="{{ site.baseurl }}/assets/img/improved_smile.m4v" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> 
+    </div>
+</div>
+<div class="caption">
+    Improved Example 3: Left the look image (<a href="https://github.com/NVlabs/ffhq-dataset">FFHQ</a>), middle the landmark video (<a href="https://www.pexels.com/video/">pexels</a>), right the output.
+</div>
+
 
 ### References
 
