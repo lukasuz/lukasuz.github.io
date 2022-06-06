@@ -14,7 +14,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hey! I am a PhD Candidate at <a href="https://graphics.tudelft.nl/">CGV</a>, TU Delft (Netherlands). My research interests lie at the intersection of Computer Vision and Computer Graphics. More precisely, I am interested in generative models and neural rendering, allowing for the synthesis of controllable and 3D consistent images and videos involving human factors.
+Hey, I am a PhD Candidate at <a href="https://graphics.tudelft.nl/">CGV</a>, TU Delft (Netherlands). My research interests lie at the intersection of Computer Vision and Computer Graphics. More precisely, I am interested in generative models and neural rendering, allowing for the synthesis of controllable and 3D consistent images and videos involving human factors.
 
 I received an M.Sc. degree with distinction in <a href="http://ipcv.eu/">Computer Vision and Image Processing</a>, jointly coordinated by the Autonomous University of Madrid (Spain), University of Bordeaux (France), and Pázmány Péter Catholic University (Hungary) under the Erasmus Mundus initiative. I wrote my Master's thesis at the <a href="https://vcg.seas.harvard.edu/">Visual Computing Group</a> at Harvard University (USA). Before this, I obtained a B.Sc. with honours at the University of Hamburg (Germany) in <a href="https://www.inf.uni-hamburg.de/en/inst/ab/hci.html">Human-Computer Interaction</a>. Next to my studies, I was working as a software developer at various companies.
 
