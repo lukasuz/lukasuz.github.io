@@ -7,6 +7,7 @@ paper_years: [2022, 2018]
 preprint_years: [2021]
 thesis_years: [2021, 2019]
 nav: true
+nav_order: 2
 ---
 <i>* denotes equal contribution</i>
 
