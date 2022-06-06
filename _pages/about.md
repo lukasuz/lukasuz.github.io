@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: Computer Vision. Generative Models. Image Synthesis.  # <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: Neural Rendering. 3D Computer Vision. Generative Models. # <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
@@ -14,9 +14,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hey! I recently finished my Master's degree in <a href="http://ipcv.eu/">Computer Vision and Image Processing</a> under the Erasmus Mundus initiative, taking place in Hungary, Spain, and France. I wrote my Master's thesis at the Visual Computing Group <a href="https://vcg.seas.harvard.edu/">(VCG)</a> at Harvard University, supervised by <a href="https://vcg.seas.harvard.edu/people/hanspeter-pfister">Hanspeter Pfister</a>, <a href="https://donglaiw.github.io/">Donglai Wei</a>, and <a href="https://sites.google.com/site/pierrickcoupe/">Pierrick Coupé</a>. Before this, I did my Bachelor's at the University of Hamburg in <a href="https://www.inf.uni-hamburg.de/en/inst/ab/hci.html">Human-Computer Interaction</a>. I graduated with distinction in both cases. Next to university, I was working as a software developer at various companies. For more detailed information and projects, check my CV or the news below.
+Hey! I am a PhD Candidate at <a href="https://graphics.tudelft.nl/">CGV</a>, TU Delft (Netherlands). My research interests lie at the intersection of Computer Vision and Computer Graphics. More precisely, I am interested in generative models and neural rendering, allowing for the synthesis of controllable and 3D consistent images and videos involving human factors.
 
-My research interests lie in vision systems involving human factors. More specifically, I am interested in generative models that can be used for synthesising novel <i>things</i> and image manipulation, for imagery revolving around humans.
+I received an M.Sc. degree with distinction in <a href="http://ipcv.eu/">Computer Vision and Image Processing</a>, jointly coordinated by the Autonomous University of Madrid (Spain), University of Bordeaux (France), and Pázmány Péter Catholic University (Hungary) under the Erasmus Mundus initiative. I wrote my Master's thesis at the <a href="https://vcg.seas.harvard.edu/">Visual Computing Group</a> at Harvard University (USA). Before this, I obtained a B.Sc. with honours at the University of Hamburg (Germany) in <a href="https://www.inf.uni-hamburg.de/en/inst/ab/hci.html">Human-Computer Interaction</a>. Next to my studies, I was working as a software developer at various companies.
 
 <!-- Having a background in Computer Vision and Human-Computer Interaction, I am passionate
 about vision systems involving human factors. Especially use-cases that have a practical
