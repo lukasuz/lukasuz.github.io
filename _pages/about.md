@@ -14,7 +14,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-<b>For Master thesis topics click <a href="{{ site.baseurl }}/thesis-topics/">here</a></b>
+<b>For Master thesis topics click <a href="{{ site.baseurl }}/thesis-topics">here</a></b>
 
 Hey, I am a PhD Candidate at <a href="https://graphics.tudelft.nl/">CGV</a>, TU Delft (Netherlands). My research interests lie at the intersection of Computer Vision and Computer Graphics. Generally, I am interested in Machine Learning, Neural Rendering, and Generative Models. I am currently focusing on learning motion from 2D data, allowing for the synthesis of controllable and 3D consistent images and videos.
 
