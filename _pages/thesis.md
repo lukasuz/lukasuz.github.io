@@ -13,4 +13,4 @@ We are looking for motivated master students at TU Delft to write their thesis w
     <li>Dynamic 3D Representation Learning (e.g. <a href="https://lukas.uzolas.com/Articulated-Point-NeRF/">our work</a>)</li>
     <li>Generative Models (e.g. <a href="https://nvlabs.github.io/eg3d/">Generative Adversarial Network (GANs)</a>, <a href="https://yang-song.net/blog/2021/score/">Diffusion Models</a>)</li>
 </ul>
-If you feel like our interests align, feel free to message me or <a href="http://kellnhofer.xyz/">Petr</a> directly.
+If you feel like our interests align, feel free to <a href="mailto:lukas@uzolas.com">message me</a> or <a href="http://kellnhofer.xyz/">Petr</a> directly.
