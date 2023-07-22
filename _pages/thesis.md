@@ -7,7 +7,7 @@ nav: true
 nav_order: 3
 ---
 
-We are looking for motivated master students at TU Delft to write their thesis with. We are generally interested in topics involving Neural Rendering and Image Synthesis such as: 
+We are looking for motivated master students at TU Delft to write their thesis with us. We are generally interested in topics involving Neural Rendering and Image Synthesis such as: 
 <ul>
     <li>3D Representation Learning (e.g. <a href="https://www.matthewtancik.com/nerf">Neural Radiance Fields  (NeRF)</a>)</li>
     <li>Dynamic 3D Representation Learning (e.g. <a href="https://lukas.uzolas.com/Articulated-Point-NeRF/">our work</a>)</li>
