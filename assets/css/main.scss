@@ -13,3 +13,9 @@ $max-content-width: {{ site.max_width }};
   "base",
   "distill"
 ;
+
+// Custom
+
+.table-news {
+  padding: 0.27rem !important;
+}
