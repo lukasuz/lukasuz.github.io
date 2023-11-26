@@ -1,6 +1,6 @@
 ---
 layout: page
-title: thesis topics
+title: Thesis Topics
 permalink: /thesis-topics
 description: 
 nav: true

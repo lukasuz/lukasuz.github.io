@@ -142,6 +142,8 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  font-family: "Spectral";
+  font-size: 1.1rem;
 }
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
@@ -171,6 +173,7 @@ blockquote {
   }
   .navbar-brand {
     color: var(--global-text-color);
+    font-size: 1.7rem;
   }
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
@@ -189,7 +192,7 @@ blockquote {
   .navbar-brand.social {
     padding-bottom: 0;
     padding-top: 0;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     a {
       i::before {
         color: var(--global-text-color);
@@ -587,4 +590,9 @@ html.transition *:after {
       padding: 8px;
     }
   }
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Spectral";
 }

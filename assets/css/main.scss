@@ -17,5 +17,20 @@ $max-content-width: {{ site.max_width }};
 // Custom
 
 .table-news {
-  padding: 0.27rem !important;
+  padding: 0.2rem !important;
+}
+
+th {
+  min-width: 100px !important;
+}
+
+body {
+  font-family: "Bricolage Grotesque";
+  font-weight: 200;
+  font-size: 1.0rem;
+  line-height: 1.5rem;
+}
+
+table td {
+  font-weight: 200;
 }
