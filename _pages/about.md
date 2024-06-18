@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-description: Neural Rendering. Computer Vision. Machine Learning. # <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: Computer Graphics. Computer Vision. Machine Learning. # <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
@@ -14,11 +14,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-<b>For master thesis topics click <a href="{{ site.baseurl }}/thesis-topics">here</a>.</b>
+Hey, I am a PhD Candidate at <a href="https://graphics.tudelft.nl/">CGV</a>, TU Delft (Netherlands). My research interests lie at the intersection of Computer Vision and Computer Graphics. I am generally working on image synthesis and animation with a focus on 3D controllability, allowing for easy interaction with 3D representations and images.
 
-Hey, I am a PhD Candidate at <a href="https://graphics.tudelft.nl/">CGV</a>, TU Delft (Netherlands). My research interests lie at the intersection of Computer Vision and Computer Graphics. I am working on controllable dynamic 3D reconstruction and generally focus on how to extract motion information from image data.
+I received an M.Sc. degree with distinction in <a href="http://ipcv.eu/">Computer Vision and Image Processing</a>, jointly coordinated by the Autonomous University of Madrid (Spain), University of Bordeaux (France), and Pázmány Péter Catholic University (Hungary) under the Erasmus Mundus initiative. I wrote my Master's thesis at the <a href="https://vcg.seas.harvard.edu/">Visual Computing Group</a> at Harvard University (USA). Before this, I obtained a B.Sc. with honours at the University of Hamburg (Germany) in <a href="https://www.inf.uni-hamburg.de/en/inst/ab/hci.html">Human-Computer Interaction</a>. Next to my studies, I worked as a student software developer at various companies.
 
-I received an M.Sc. degree with distinction in <a href="http://ipcv.eu/">Computer Vision and Image Processing</a>, jointly coordinated by the Autonomous University of Madrid (Spain), University of Bordeaux (France), and Pázmány Péter Catholic University (Hungary) under the Erasmus Mundus initiative. I wrote my Master's thesis at the <a href="https://vcg.seas.harvard.edu/">Visual Computing Group</a> at Harvard University (USA). Before this, I obtained a B.Sc. with honours at the University of Hamburg (Germany) in <a href="https://www.inf.uni-hamburg.de/en/inst/ab/hci.html">Human-Computer Interaction</a>. Next to my studies, I was working as a software developer at various companies.
+<b>Prospective master thesis students please check <a href="{{ site.baseurl }}/thesis-topics">here</a>.</b>
 
 <!-- Having a background in Computer Vision and Human-Computer Interaction, I am passionate
 about vision systems involving human factors. Especially use-cases that have a practical
