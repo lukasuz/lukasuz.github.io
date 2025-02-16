@@ -32,6 +32,7 @@ jobs:
     - name: Install deps
       run: |
         gem install bundler
+        bundle config set disable_shared_gems true
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
         npm install -g mermaid.cli
