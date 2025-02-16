@@ -27,8 +27,8 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
-    - name: Update RubyGems
-      run: gem update --system
+    - name: Update RubyGems to 3.3.x
+      run: gem update --system 3.3.26
     - name: Remove existing Gemfile.lock
       run: rm -f Gemfile.lock
     - name: Install deps
