@@ -27,6 +27,8 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-gems-
+    - name: Remove existing Gemfile.lock
+      run: rm -f Gemfile.lock
     - name: Install deps
       run: |
         gem install bundler
