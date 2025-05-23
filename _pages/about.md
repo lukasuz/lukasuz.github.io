@@ -20,7 +20,7 @@ I obtained a M.Sc. degree with honours in <a href="http://ipcv.eu/">Computer Vis
 
 
 
-<b>Prospective master thesis students please check <a href="{{ site.baseurl }}/thesis-topics">here</a>.</b>
+<!-- <b>Prospective master thesis students please check <a href="{{ site.baseurl }}/thesis-topics">here</a>.</b> -->
 
 <!-- Having a background in Computer Vision and Human-Computer Interaction, I am passionate
 about vision systems involving human factors. Especially use-cases that have a practical
