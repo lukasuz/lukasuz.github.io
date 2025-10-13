@@ -16,6 +16,9 @@ social: true  # includes social icons at the bottom of the page
 
 Hey, I am a PhD Candidate at <a href="https://graphics.tudelft.nl/">CGV</a>, TU Delft (Netherlands). My research interests lie at the intersection of Computer Vision and Computer Graphics. I am generally working on image synthesis and animation with a focus on 3D controllability, allowing for easy interaction with 3D representations and images.
 
+**Graduating in Spring 2026, I am seeking exciting 2D/3D Deep Learning challenges for the coming year.**
+
+During my PhD, I was fortunate enough to join <a href="https://arvr.google.com/">Google Zurich</a> (Switzerland) for a research internship.
 I obtained a M.Sc. degree with honours in <a href="http://ipcv.eu/">Computer Vision and Image Processing</a>, jointly coordinated by the Autonomous University of Madrid (Spain), University of Bordeaux (France), and Pázmány Péter Catholic University (Hungary) under the Erasmus Mundus initiative. I wrote my Master's thesis at the <a href="https://vcg.seas.harvard.edu/">Visual Computing Group</a> at Harvard University (USA). Before this, I obtained a B.Sc. with distinction at the University of Hamburg (Germany) in <a href="https://www.inf.uni-hamburg.de/en/inst/ab/hci.html">Human-Computer Interaction</a>. Next to my studies, I worked as a student software developer at various companies. For more details check my <a href="{{ site.baseurl }}/assets/pdf/CV_Lukas_Uzolas.pdf">CV</a>.
 
 
