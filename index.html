@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lukas Uzolas</title>
+  <meta name="description" content="Personal website of Lukas Uzolas">
+  <link rel="canonical" href="https://lukas.uzolas.com/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>L</text></svg>">
+
+  <!-- Set the theme before first paint to avoid a flash. -->
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'dark' && t !== 'light') {
+        t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+    </svg>
+  </button>
+
+  <main class="page">
+    <header class="masthead">
+  <img class="portrait" src="/assets/img/prof_pic.jpg" alt="Lukas Uzolas" width="112" height="112">
+  <div>
+    <h1>Lukas Uzolas</h1>
+    <p class="tagline">Machine Learning · Research · Software Development</p>
+    <nav class="chips" aria-label="Links">
+      <a class="chip" href="/assets/pdf/CV_Lukas_Uzolas.pdf" target="_blank" rel="noopener">CV</a>
+      <a class="chip" href="https://www.linkedin.com/in/lukas-uzolas" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="chip" href="https://scholar.google.com/citations?user=d21AHFQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="chip" href="https://github.com/lukasuz" target="_blank" rel="noopener">GitHub</a>
+      <a class="chip" href="mailto:lukas@uzolas.com">Email</a>
+    </nav>
+  </div>
+</header>
+
+<section class="bio">
+  <p>I obtained my PhD at <a href="https://graphics.tudelft.nl/">CGV</a>, TU Delft (Netherlands), with my research conducted at the intersection of Computer Vision and Computer Graphics. I explored image synthesis and 3D animation, focusing on 3D controllability to enable easy interaction with 3D representations and images.</p>
+
+<p>During my PhD, I was fortunate enough to join <a href="https://arvr.google.com/">Google Zurich</a> (Switzerland) for a research internship.
+I obtained a M.Sc. degree with honours in <a href="http://ipcv.eu/">Computer Vision and Image Processing</a>, jointly coordinated by the Autonomous University of Madrid (Spain), University of Bordeaux (France), and Pázmány Péter Catholic University (Hungary) under the Erasmus Mundus initiative. I wrote my Master’s thesis at the <a href="https://vcg.seas.harvard.edu/">Visual Computing Group</a> at Harvard University (USA). Before this, I obtained a B.Sc. with distinction at the University of Hamburg (Germany) in <a href="https://www.inf.uni-hamburg.de/en/inst/ab/hci.html">Human-Computer Interaction</a>. Next to my studies, I worked as a student software developer at various companies. For more details check my <a href="/assets/pdf/CV_Lukas_Uzolas.pdf">CV</a>.</p>
+
+</section>
+
+<section class="news">
+  <h2>News</h2>
+  <div class="news-item">
+    <time datetime="2026-09-16">Sep 2026</time>
+    <p>Successfully defended my dissertation entitled <a href="https://research.tudelft.nl/en/publications/e%EF%AC%83cient-3d-deformation-learning-with-neural-representations/">Eﬃcient 3D Deformation Learning with Neural Representations</a>.</p>
+  </div>
+  <div class="news-item">
+    <time datetime="2025-10-13">Oct 2025</time>
+    <p><a href="https://lukas.uzolas.com/SurfaceAware3DFeatures/">Surface-Aware Distilled 3D Semantic Features</a> accepted at SIGGRAPH Asia 2025.</p>
+  </div>
+  <div class="news-item">
+    <time datetime="2025-05-19">May 2025</time>
+    <p>I joined Google Zurich as a research intern for the summer.</p>
+  </div>
+  <div class="news-item">
+    <time datetime="2024-11-05">Nov 2024</time>
+    <p>Our paper on zero-shot mesh animation (<a href="https://lukas.uzolas.com/MotionDreamer/">MotionDreamer</a>) was accepted at 3DV 2025.</p>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="page">
+    © 2026 Lukas Uzolas
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var root = document.documentElement;
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.classList.add('transition');
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      setTimeout(function () { root.classList.remove('transition'); }, 400);
+    });
+  </script>
+</body>
+</html>

@@ -1,9 +1,60 @@
----
-layout: default
-permalink: /404.html
-title: Page not found
-redirect: true
-sitemap: false
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Lukas Uzolas</title>
+  <meta name="description" content="Personal website of Lukas Uzolas">
+  <link rel="canonical" href="https://lukas.uzolas.com/404.html">
+  <meta http-equiv="refresh" content="3; url=https://lukas.uzolas.com/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>L</text></svg>">
 
-<p>Nothing here. You will be redirected to the <a href="{{ '/' | relative_url }}">main page</a> in a few seconds.</p>
+  <!-- Set the theme before first paint to avoid a flash. -->
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'dark' && t !== 'light') {
+        t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+    </svg>
+  </button>
+
+  <main class="page">
+    <p>Nothing here. You will be redirected to the <a href="/">main page</a> in a few seconds.</p>
+
+  </main>
+
+  <footer class="page">
+    © 2026 Lukas Uzolas
+  </footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var root = document.documentElement;
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.classList.add('transition');
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      setTimeout(function () { root.classList.remove('transition'); }, 400);
+    });
+  </script>
+</body>
+</html>
