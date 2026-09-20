@@ -1,0 +1,343 @@
+/* ---------------------------------------------------------------------------
+   Tokens
+   --------------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #212121;
+  --muted: #7b7b7b;
+  --rule: #e8e8e8;
+  --chip-bg: #f4f4f4;
+  --chip-text: #6e7174;
+  --link: #42b983;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #141414;
+  --text: #e4e4e4;
+  --muted: #9a9a9a;
+  --rule: #2a2a2a;
+  --chip-bg: #222222;
+  --chip-text: #a3a3a3;
+  --link: #42b983;
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------------- */
+html {
+  font-family: "Spectral", Georgia, "Times New Roman", serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html.transition,
+html.transition * {
+  transition: background-color .4s ease, color .4s ease, border-color .4s ease;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Centered column */
+.page {
+  box-sizing: border-box;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 0;
+}
+
+footer.page {
+  padding-top: 0;
+  padding-bottom: 2.5rem;
+  margin-top: 4rem;
+  font-size: .8rem;
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------------------------
+   Masthead
+   --------------------------------------------------------------------------- */
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.portrait {
+  flex: none;
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.masthead h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.005em;
+}
+
+.tagline {
+  margin: .35rem 0 .9rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .2rem .6rem;
+  border-radius: 9px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  font-size: .8rem;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color .15s ease, background-color .15s ease;
+}
+
+.chip:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Bio
+   --------------------------------------------------------------------------- */
+.bio {
+  margin-top: 2.5rem;
+}
+
+.bio p {
+  margin: 0 0 1.1rem;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   News
+   --------------------------------------------------------------------------- */
+.news {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.news h2 {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: .25rem 1rem;
+  padding: .35rem 0;
+}
+
+.news-item time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.news-item p {
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Theme toggle
+   --------------------------------------------------------------------------- */
+#theme-toggle {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#theme-toggle:hover {
+  color: var(--text);
+}
+
+#theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+[data-theme="dark"] .icon-moon,
+:root:not([data-theme="dark"]) .icon-sun {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Blog posts (the two old ones, reachable via news only)
+   --------------------------------------------------------------------------- */
+.back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--muted);
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post h1 {
+  margin: 0 0 .25rem;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.post-meta {
+  margin: 0 0 2rem;
+  color: var(--muted);
+}
+
+.post h2,
+.post h3 {
+  margin: 2rem 0 .75rem;
+  font-weight: 500;
+}
+
+.post h2 { font-size: 1.35rem; }
+.post h3 { font-size: 1.1rem; }
+
+.post img,
+.post video {
+  border-radius: 6px;
+}
+
+.post code {
+  font-size: .9em;
+}
+
+.post pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 6px;
+  background: var(--chip-bg);
+  font-size: .85rem;
+}
+
+/* Shim for the Bootstrap grid classes used inside the old posts */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.col-sm {
+  flex: 1 1 0;
+  min-width: 12rem;
+}
+
+.caption {
+  margin-top: .5rem;
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: center;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive
+   --------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .page {
+    padding-top: 3rem;
+  }
+
+  .masthead {
+    gap: 1.1rem;
+  }
+
+  .portrait {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+
+  .masthead h1 {
+    font-size: 1.6rem;
+  }
+
+  .tagline {
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: .5rem 0;
+  }
+
+  .news-item time {
+    font-size: .85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.transition,
+  html.transition *,
+  .chip {
+    transition: none;
+  }
+}
