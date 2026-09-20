@@ -2,7 +2,7 @@
 # Site
 # -----------------------------------------------------------------------------
 title: Lukas Uzolas
-tagline: Computer Graphics · Computer Vision · Machine Learning
+tagline: Machine Learning · Research · Software Development 
 description: Personal website of Lukas Uzolas
 email: lukas@uzolas.com
 url: https://lukas.uzolas.com   # used by the sitemap, robots.txt and the 404 redirect
@@ -21,7 +21,7 @@ links:
 
 # News items live in _data/news.yml.
 # Uncomment to show only the N most recent items (all are shown otherwise).
-news_limit: 5
+news_limit: 4
 
 # -----------------------------------------------------------------------------
 # Jekyll
