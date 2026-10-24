@@ -1,7 +1,25 @@
 ---
 permalink: /robots.txt
 ---
+# Everything on this site is public and may be crawled.
 User-agent: *
 Disallow:
 
-Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
+# AI search / answer engines (these are what cite pages in ChatGPT, Claude,
+# Perplexity and friends — they are separate from the training crawlers below).
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+Allow: /
+
+# Training crawlers. Change "Allow" to "Disallow" below to opt out of training
+# without affecting the search/answer bots above.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: {{ "/sitemap.xml" | absolute_url }}

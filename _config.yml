@@ -2,8 +2,10 @@
 # Site
 # -----------------------------------------------------------------------------
 title: Lukas Uzolas
-tagline: Machine Learning · Research · Software Development 
-description: Personal website of Lukas Uzolas
+tagline: Machine Learning · Research · Software Engineering
+description: >-
+  Lukas Uzolas, software engineer at Google Search in Zurich with a PhD from TU Delft.
+  Research on 3D deformation, mesh animation and image synthesis with neural representations.
 email: lukas@uzolas.com
 url: https://lukas.uzolas.com   # used by the sitemap, robots.txt and the 404 redirect
 baseurl: ""
@@ -19,9 +21,44 @@ links:
   - { label: GitHub,         url: "https://github.com/lukasuz" }
   - { label: Email,          url: "mailto:lukas@uzolas.com" }
 
-# News items live in _data/news.yml.
+# News items live in _data/news.yml, publications in _data/publications.yml.
 # Uncomment to show only the N most recent items (all are shown otherwise).
 news_limit: 4
+
+# -----------------------------------------------------------------------------
+# Project pages that live on this domain but are built from other repositories.
+# Jekyll never sees them, so they are listed here for sitemap.xml and llms.txt.
+# -----------------------------------------------------------------------------
+external_pages:
+  - { url: /SurfaceAware3DFeatures/, title: "Surface-Aware Distilled 3D Semantic Features (SIGGRAPH Asia 2025)" }
+  - { url: /MotionDreamer/,          title: "MotionDreamer: zero-shot 3D mesh animation (3DV 2025)" }
+  - { url: /Articulated-Point-NeRF/, title: "Template-free Articulated Neural Point Clouds (NeurIPS 2023)" }
+
+# -----------------------------------------------------------------------------
+# schema.org Person data, emitted as JSON-LD on the homepage.
+# The sameAs list is taken from the absolute URLs in `links` above.
+# -----------------------------------------------------------------------------
+person:
+  job_title: Software Engineer
+  works_for: { name: Google, url: "https://www.google.com/" }
+  location: "Zürich, Switzerland"
+  alumni_of:
+    - { name: Delft University of Technology, url: "https://www.tudelft.nl/" }
+    - { name: University of Bordeaux,         url: "https://www.u-bordeaux.fr/" }
+    - { name: Autonomous University of Madrid, url: "https://www.uam.es/" }
+    - { name: Pázmány Péter Catholic University, url: "https://ppke.hu/" }
+    - { name: University of Hamburg,          url: "https://www.uni-hamburg.de/" }
+  knows_about:
+    - Computer Vision
+    - Computer Graphics
+    - 3D Deformation
+    - Mesh Animation
+    - Neural Rendering
+    - Generative Models
+    - Machine Learning
+    - Deep Learning
+    - Software Engineering
+    - GenAI
 
 # -----------------------------------------------------------------------------
 # Jekyll
@@ -30,7 +67,9 @@ permalink: /blog/:year/:title/   # keeps the URLs of the two old blog posts
 include: [_pages]
 exclude: [bin, vendor, LICENSE]
 keep_files: [.git]
-plugins: [jekyll-sitemap]
+# sitemap.xml is hand-rolled (it also lists the project pages from other repos),
+# so jekyll-sitemap is not used.
+plugins: []
 
 defaults:
   - scope: { path: "", type: posts }

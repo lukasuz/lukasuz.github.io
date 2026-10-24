@@ -1,0 +1,35 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
+
+> Software Engineer at Google Search, Zurich. PhD from TU Delft (Computer Graphics & Visualisation
+> group, 2026), working at the intersection of computer vision and computer graphics
+> on 3D deformation, mesh animation and controllable image synthesis with neural
+> representations. 
+
+Earlier: M.Sc. with honours in Computer Vision and Image Processing (Erasmus Mundus:
+University of Bordeaux, Autonomous University of Madrid, Pázmány Péter Catholic
+University), with a Master's thesis at the Visual Computing Group, Harvard University;
+B.Sc. with distinction in Human-Computer Interaction, University of Hamburg.
+Based in {{ site.person.location }}. Contact: {{ site.email }}.
+
+## Profile
+- [Homepage]({{ "/" | absolute_url }}): Bio, publications, news
+- [CV (PDF)]({{ "/assets/pdf/CV_Lukas_Uzolas.pdf" | absolute_url }}): Full CV
+{%- for l in site.links %}
+{%- if l.url contains "://" %}
+- [{{ l.label }}]({{ l.url }})
+{%- endif %}
+{%- endfor %}
+
+## Selected publications
+{%- for p in site.data.publications %}
+- [{{ p.title }}]({% if p.links %}{{ p.links[0].url | absolute_url }}{% else %}{{ "/" | absolute_url }}{% endif %}): {{ p.authors }}. {{ p.venue }}.
+{%- endfor %}
+
+## Optional
+{%- for post in site.posts %}
+- [{{ post.title }}]({{ post.url | absolute_url }}): Blog post, {{ post.date | date: "%Y" }}
+{%- endfor %}

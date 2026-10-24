@@ -28,3 +28,21 @@ layout: default
   </div>
   {%- endfor %}
 </section>
+
+<section class="pubs">
+  <h2>Selected Publications</h2>
+  {%- for p in site.data.publications %}
+  <article class="pub">
+    <h3>{{ p.title }}</h3>
+    <p class="pub-authors">{{ p.authors }}</p>
+    <p class="pub-venue">{{ p.venue }}</p>
+    {%- if p.links %}
+    <nav class="chips" aria-label="Links for {{ p.title | escape }}">
+      {%- for l in p.links %}
+      <a class="chip" href="{{ l.url | relative_url }}"{% if l.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}</a>
+      {%- endfor %}
+    </nav>
+    {%- endif %}
+  </article>
+  {%- endfor %}
+</section>

@@ -1,0 +1,27 @@
+---
+permalink: /sitemap.xml
+sitemap: false
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hand-rolled instead of jekyll-sitemap, so the project pages that live in
+     other repositories (site.external_pages in _config.yml) are listed too.
+     Set "sitemap: false" in a page's front matter to leave it out. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- assign pages = site.pages | concat: site.documents | sort: "url" %}
+  {%- for p in pages %}
+  {%- unless p.sitemap == false or p.redirect or p.url contains ".xml" or p.url contains ".txt" %}
+  <url>
+    <loc>{{ p.url | replace: "index.html", "" | absolute_url | xml_escape }}</loc>
+    {%- if p.date %}
+    <lastmod>{{ p.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endunless %}
+  {%- endfor %}
+  {%- for p in site.external_pages %}
+  <url>
+    <loc>{{ p.url | absolute_url | xml_escape }}</loc>
+  </url>
+  {%- endfor %}
+</urlset>

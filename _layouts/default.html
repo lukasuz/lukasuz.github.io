@@ -23,6 +23,41 @@
     })();
   </script>
 
+  {%- if page.url == "/" %}
+  <!-- schema.org Person, so search engines and LLMs can tie the profiles together. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.title | jsonify }},
+    "url": {{ "/" | absolute_url | jsonify }},
+    "image": {{ "/assets/img/prof_pic.jpg" | absolute_url | jsonify }},
+    "email": {{ site.email | prepend: "mailto:" | jsonify }},
+    "jobTitle": {{ site.person.job_title | jsonify }},
+    {%- if site.person.works_for %}
+    "worksFor": { "@type": "Organization", "name": {{ site.person.works_for.name | jsonify }}, "url": {{ site.person.works_for.url | jsonify }} },
+    {%- endif %}
+    "description": {{ site.description | strip | jsonify }},
+    "homeLocation": { "@type": "Place", "name": {{ site.person.location | jsonify }} },
+    "knowsAbout": {{ site.person.knows_about | jsonify }},
+    "alumniOf": [
+      {%- for a in site.person.alumni_of %}
+      { "@type": "CollegeOrUniversity", "name": {{ a.name | jsonify }}, "url": {{ a.url | jsonify }} }{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
+    ],
+    "sameAs": [
+      {%- assign profiles = "" | split: "" -%}
+      {%- for l in site.links -%}
+        {%- if l.url contains "://" -%}{%- assign profiles = profiles | push: l.url -%}{%- endif -%}
+      {%- endfor %}
+      {%- for u in profiles %}
+      {{ u | jsonify }}{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
+    ]
+  }
+  </script>
+  {%- endif %}
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">

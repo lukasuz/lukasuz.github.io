@@ -6,9 +6,14 @@
 #   date: YYYY-MM-DD  (zero-padded, e.g. 2024-11-05 — otherwise sorting breaks)
 #   text: markdown    (links as [label](url); use ">-" for multi-line text)
 
+- date: 2026-10-01
+  text: >-
+    [Rotation-Equivariant Neural Jacobian Fields](https://github.com/lukasuz/Re-NJF)
+    for generalizable 3D mesh deformations accepted at SIGGRAPH Asia 2026.
+
 - date: 2026-09-16
   text: >-
-    Successfully defended my dissertation entitled [Eﬃcient 3D Deformation Learning with Neural Representations](https://research.tudelft.nl/en/publications/e%EF%AC%83cient-3d-deformation-learning-with-neural-representations/).
+    Successfully defended my dissertation entitled [Efficient 3D Deformation Learning with Neural Representations](https://research.tudelft.nl/en/publications/e%EF%AC%83cient-3d-deformation-learning-with-neural-representations/).
 
 - date: 2025-10-13
   text: >-

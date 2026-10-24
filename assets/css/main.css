@@ -150,20 +150,48 @@ footer.page {
 }
 
 /* ---------------------------------------------------------------------------
-   News
+   News & publications
    --------------------------------------------------------------------------- */
+.pubs,
 .news {
-  margin-top: 3.5rem;
+  margin-top: 1.75rem;
   padding-top: 2rem;
   border-top: 1px solid var(--rule);
 }
 
+.pubs h2,
 .news h2 {
   margin: 0 0 1.25rem;
   color: var(--muted);
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: .02em;
+}
+
+.pub + .pub {
+  margin-top: 1.5rem;
+}
+
+.pub h3 {
+  margin: 0 0 .2rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.pub-authors,
+.pub-venue {
+  margin: 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.pub-venue {
+  font-style: italic;
+}
+
+.pub .chips {
+  margin-top: .45rem;
 }
 
 .news-item {
