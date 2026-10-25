@@ -1,8 +1,4 @@
----
-permalink: /llms.txt
-sitemap: false
----
-# {{ site.title }}
+# Lukas Uzolas
 
 > Software Engineer at Google Search, Zurich. PhD from TU Delft (Computer Graphics & Visualisation
 > group, 2026), working at the intersection of computer vision and computer graphics
@@ -13,23 +9,21 @@ Earlier: M.Sc. with honours in Computer Vision and Image Processing (Erasmus Mun
 University of Bordeaux, Autonomous University of Madrid, Pázmány Péter Catholic
 University), with a Master's thesis at the Visual Computing Group, Harvard University;
 B.Sc. with distinction in Human-Computer Interaction, University of Hamburg.
-Based in {{ site.person.location }}. Contact: {{ site.email }}.
+Based in Zürich, Switzerland. Contact: lukas@uzolas.com.
 
 ## Profile
-- [Homepage]({{ "/" | absolute_url }}): Bio, publications, news
-- [CV (PDF)]({{ "/assets/pdf/CV_Lukas_Uzolas.pdf" | absolute_url }}): Full CV
-{%- for l in site.links %}
-{%- if l.url contains "://" %}
-- [{{ l.label }}]({{ l.url }})
-{%- endif %}
-{%- endfor %}
+- [Homepage](https://lukas.uzolas.com/): Bio, publications, news
+- [CV (PDF)](https://lukas.uzolas.com/assets/pdf/CV_Lukas_Uzolas.pdf): Full CV
+- [LinkedIn](https://www.linkedin.com/in/lukas-uzolas)
+- [Google Scholar](https://scholar.google.com/citations?user=d21AHFQAAAAJ)
+- [GitHub](https://github.com/lukasuz)
 
 ## Selected publications
-{%- for p in site.data.publications %}
-- [{{ p.title }}]({% if p.links %}{{ p.links[0].url | absolute_url }}{% else %}{{ "/" | absolute_url }}{% endif %}): {{ p.authors }}. {{ p.venue }}.
-{%- endfor %}
+- [Rotation-Equivariant Neural Jacobian Fields for Generalizable 3D Mesh Deformations](https://github.com/lukasuz/Re-NJF): Lukas Uzolas, Ruben Wiersma, Olga Sorkine-Hornung, Petr Kellnhofer. SIGGRAPH Asia 2026.
+- [Surface-Aware Distilled 3D Semantic Features](https://lukas.uzolas.com/SurfaceAware3DFeatures/): Lukas Uzolas, Elmar Eisemann, Petr Kellnhofer. SIGGRAPH Asia 2025.
+- [MotionDreamer: Exploring Semantic Video Diffusion features for Zero-Shot 3D Mesh Animation](https://lukas.uzolas.com/MotionDreamer/): Lukas Uzolas, Elmar Eisemann, Petr Kellnhofer. 3DV 2025.
+- [Template-free Articulated Neural Point Clouds for Reposable View Synthesis](https://lukas.uzolas.com/Articulated-Point-NeRF/): Lukas Uzolas, Elmar Eisemann, Petr Kellnhofer. NeurIPS 2023.
 
 ## Optional
-{%- for post in site.posts %}
-- [{{ post.title }}]({{ post.url | absolute_url }}): Blog post, {{ post.date | date: "%Y" }}
-{%- endfor %}
+- [Face animations without training](https://lukas.uzolas.com/blog/2021/animation/): Blog post, 2021
+- [Facial landmark projection without training](https://lukas.uzolas.com/blog/2021/landmarks/): Blog post, 2021
